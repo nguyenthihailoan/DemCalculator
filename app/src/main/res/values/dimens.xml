@@ -1,0 +1,8 @@
+
+<resources>
+    <dimen name="dgv_overlap_if_switch_straight_line">16dp</dimen>
+    <dimen name="sp_28">28sp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+
+</resources>

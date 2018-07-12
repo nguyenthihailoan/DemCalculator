@@ -1,8 +1,398 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.lx.ltuddd.democaculator.MainActivity">
-</android.support.constraint.ConstraintLayout>
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="right|center"
+                android:textSize="28sp" />
+
+            <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                android:id="@+id/text_result"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:gravity="right|center"
+                android:textSize="@dimen/sp_28" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_ac"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/ac"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/bracket"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_per_cent"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/per_cent"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_div"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/div"
+
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/sp_28" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#ccc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_seven"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/seven"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_eight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/eight"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_nine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/nine"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_mul"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/mul"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/sp_28" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#ccc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_four"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/four"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_five"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/five"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_six"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/six"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_sub"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/sub"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/sp_28" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#ccc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_one"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/one"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_two"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/two"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_three"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/three"
+
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_add"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/add"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/sp_28" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#ccc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_dot"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/dot"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_zero"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/zero"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_type"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/type"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#ccc" />
+
+                <com.lx.ltuddd.democaculator.utils.TextViewMedium
+                    android:id="@+id/text_equal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_click_selector"
+                    android:gravity="center"
+                    android:text="@string/equal"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/sp_28" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
